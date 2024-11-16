@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css?family=Walter%20Turncoat:700|Walter%20Turncoat:400');
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Walter Turncoat';
+}
+body {
+    background-color:rgb(6, 19, 34);
+}
+.sidebar{
+    background-color:rgb(143, 45, 24);
+    width:15%;
+    position:fixed;
+    margin:16px;
+    border-radius:16px;
+    height: calc(100vh - 32px);
+    transition :0.5s ease;
+}
+.sidebar.collapsed {
+    width:5%;
+}
+
+.sidebar-header {
+    position:relative;
+    display:flex;
+    padding: 25px 20px;
+    align-items:center;
+    justify-content: space-between;
+}
+.sidebar-header .logo  img {
+    width:66px;
+    height:66px;
+    display:block;
+    object-fit:contain;
+    border-radius:50%;
+}
+
+.sidebar.collapsed.sidebar-header .logo  img{
+    width:45px;
+    height:45px;
+}
+.sidebar-header .toggler span{
+    transition:0.5s ease;
+}
+.sidebar.collapsed .sidebar-header .toggler span {
+    transform:rotate(180deg);
+}
+.sidebar-nav .nav-list {
+    list-style:none;
+    display:flex;
+    gap:4px;
+    padding:0 15px;
+    flex-direction:column;
+    transform:translateY(15px);
+}
+.sidebar-nav .nav-link {
+    color:white;
+    text-decoration:none;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    border-radius:8px;
+    padding:22px 15px;
+    transition: 0.5s ease;
+    font-size:15px;
+}
+.sidebar-nav .nav-link:hover {
+    color:#151a2d;
+    background-color: white;
+}
+.sidebar.collapsed .nav-link .nav-label{
+    opacity:0;
+    pointer-events:none;
+    font-size:10px;
+}
+.sidebar-nav .nav-link .nav-label{
+    transition: 0.5s ease;
+}
