@@ -1,6 +1,6 @@
 const pairs = [
     {
-        video: "../videos/vid1.mp4",
+        video: "videos/vid1.mp4",
         question: "Where did Paisii Hilendarski live?",
         answers: {
             a: "Bulgaria",
@@ -9,7 +9,7 @@ const pairs = [
         correctAnswer: "b",
     },
     {
-        video: "../videos/vid2.mp4",
+        video: "videos/vid2.mp4",
         question: "What is the capital of Bulgaria?",
         answers: {
             a: "Sofia",
@@ -18,7 +18,7 @@ const pairs = [
         correctAnswer: "a",
     },
     {
-        video: "../videos/vid3.mp4",
+        video: "videos/vid3.mp4",
         question: "What is the capital of Bulgaria?",
         answers: {
             a: "Sofia",
@@ -29,14 +29,16 @@ const pairs = [
 ];
 const container = document.getElementById("container");
 let currentState = "video";
+let currentPair = getRandomPair(pairs);
 
 window.addEventListener("wheel", event => {
     if (currentState === "video") {
-        container.innerHTML = '<video src=${getRandomPair(pairs)[video]} width="500" height="500" controls loop type="video/mp4"></video>';
         currentState = "question";
+        container.innerHTML = `<video src=${currentPair.video} width="500" height="500" controls loop type="video/mp4"></video>`;
+        currentPair = getRandomPair(pairs); // Change pair after user answers flashcard
     } else {
         currentState = "video";
-        container.innerHTML = `<video src=${getRandomPair(pairs)[video]} width="500" height="500" controls loop type="video/mp4"></video>`;
+        container.innerHTML = `<video src=${currentPair.video} width="500" height="500" controls loop type="video/mp4"></video>`;
     }
 })
 
