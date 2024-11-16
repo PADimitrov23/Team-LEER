@@ -3,9 +3,10 @@ p {
 }
 #container {
     width: 500px;
-    height: 500px;
-    background-color:white;
+    height: 100%;
     max-width: fit-content;
     margin: auto;
-    margin-top:auto;
+}
+video {
+    height:100%;
 }
