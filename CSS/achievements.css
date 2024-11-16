@@ -1,0 +1,85 @@
+:root{
+    --text: rgb(232, 242, 251);
+    --background: rgb(6, 19, 34);
+    --primary: rgb(132, 189, 235);
+    --secondary: rgb(143, 45, 24);
+    --accent: rgb(198, 221, 48);
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text);
+
+    margin: 3em 3em 0;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+img.profile {
+    width: 5em;
+    height: 5em;
+    clip-path: circle(50% at 50% 50%);
+    position: relative;
+    bottom: 2.5em;
+}
+
+div.profile {
+    background-color: var(--secondary);
+    border-radius: 5px;
+    margin-bottom: 3em;
+}
+
+div.profile ul {
+    display: grid;
+    grid-template-columns: auto auto;
+    position: relative;
+    bottom: 1.4em;
+}
+
+div.profile li {
+    display: inline;
+}
+
+div#badge-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+div.badge {
+    background-color: var(--primary);
+    border-radius: 5px;
+    padding: 1em;
+    margin-bottom: 1em;
+    font-size: 1.45em;
+}
+
+div.badge img {
+    width: 6em;
+    height: 6em;
+    margin-bottom: 0.5em;
+}
+
+div.badge progress {
+    margin-top: 0.8em;
+    border-radius: 5px;
+    height: 0.8em;
+}
+
+div.badge progress::-webkit-progress-bar {
+    border-radius: 5px;
+    background-color: rgb(80, 156, 219);
+    box-shadow: 0 1px 1px -0.5px var(--background) inset;
+}
+
+div.badge progress::-webkit-progress-value {
+    border-radius: 5px 0 0 5px;
+    background-color: var(--accent);
+    background-image: repeating-linear-gradient(-45deg, transparent, transparent 10px, rgba(0, 0, 0, 0.1) 10px, rgba(0, 0, 0, 0.1) 20px);
+    box-shadow: 0 1px 1px -0.5px var(--background) inset, 1px 0.5px 1px -1.1px var(--background);
+}
