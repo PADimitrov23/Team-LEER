@@ -1,12 +1,52 @@
-p {
-    color:white;
+:root {
+    --text: rgb(232, 242, 251);
+    --background: rgb(6, 19, 34);
+    --primary: rgb(132, 189, 235);
+    --secondary: rgb(143, 45, 24);
+    --accent: rgb(198, 221, 48);
 }
+
+body {
+    color: var(--text);
+}
+
 #container {
     width: 500px;
     height: 100%;
     max-width: fit-content;
     margin: auto;
 }
+
 video {
-    height:100%;
+    height: 100%;
+}
+
+div#question {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 2em;
+    background-color: rgb(29, 62, 99);
+    padding: 5em;
+    border-radius: 15px;
+    position: relative;
+    top: 5em;
+}
+
+div#question h1 {
+    grid-column: 1 / span 2;
+    margin-bottom: 1.5em;
+    font-size: 2em;
+}
+
+div#question button {
+    background-color: var(--primary);
+    font-size: 1em;
+}
+
+div#question button#correct {
+    background-color: var(--accent);
+}
+
+div#question button#incorrect {
+    background-color: var(--secondary);
 }
