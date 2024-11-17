@@ -1,97 +1,80 @@
-body{
-    background: rgb(143,45,24);
-    background: radial-gradient(circle, rgba(143,45,24,1) 0%, rgba(3,10,18,1) 100%);
+:root {
+    --text: rgb(232, 242, 251);
+    --background: rgb(6, 19, 34);
+    --primary: rgb(132, 189, 235);
+    --secondary: rgb(143, 45, 24);
+    --accent: rgb(198, 221, 48);
 }
 
-  
-body { 
-    margin: 15px; 
-    display: flex; 
-    justify-content: space-around; 
-    flex-direction: column; 
-    height: 100vh; 
-    background-color: #bde5d2; 
-   
-  
-} 
-  
-.textup { 
-    align-items: center;
-    text-align: center; 
-    color: rgb(60, 82, 110); 
-    font-weight: 700; 
-} 
-  
-i { 
-    margin-right: 3px; 
-} 
-  
-.form-box {
-
-    background-color: rgba(143,45,24,1); 
-    box-shadow: 0 0 10px rgb(0, 0, 0); 
-    padding: 15px; 
-    border-radius: 8px; 
-    width: 500px; 
-    height: 700px; 
-} 
-  
-form { 
-    max-width: 450px; 
-    margin: 0 auto; 
-} 
-  
-.radio-group { 
-    display: flex; 
-    margin-bottom: 18px; 
-} 
-  
-input[type="radio"] { 
-    margin-right: 8px; 
-} 
-  
-label { 
-    display: block; 
-    margin-bottom: 8px; 
-    font-size: 17px; 
-    color: rgb(60, 82, 110); 
-    font-weight: 600; 
-} 
-  
-input, 
-textarea { 
-    width: 100%; 
-    padding: 8px; 
-    margin-bottom: 12px; 
-    box-sizing: border-box; 
-    border-radius: 10px; 
-  
-} 
-  
-button { 
-    background-color: #000000; 
-    color: #fff; 
-    padding: 10px; 
-    border: none; 
-    border-radius: 25px; 
-    cursor: pointer; 
-    width: 100%; 
-    font-size: 15px; 
-    transition: .3s linear; 
-} 
-  
-button:hover { 
-    background-color:rgba(143,45,24,1); 
-    border: none; 
-    transform: translateY(-10px); 
-} 
-  
-h1 { 
-    color: rgb(0, 0, 0); 
+body {
+    background-image: radial-gradient(circle, var(--secondary) 0%, var(--background) 100%);
     text-align: center;
-    font-size: 60px;
+    color: var(--text);
 }
 
-/* MAKING THE CSS FOR THE FEEDBACK FORM */
+main {
+    margin-left: 15%;
+}
 
+form {
+    max-width: 500px;
+    margin: 0 auto 1em;
+    background-color: var(--primary);
+    box-shadow: 0 0 10px var(--background);
+    padding: 1em;
+    border-radius: 8px;
+}
 
+label {
+    display: block;
+    margin-bottom: 0.5em;
+    font-size: 1em;
+    color: rgb(60, 82, 110);
+    font-weight: 600;
+}
+
+label[for="yes"],
+label[for="no"] {
+    display: inline;
+}
+
+label[for="yes"] {
+    margin-right: 5em;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 0.5em;
+    margin-bottom: 1.9em;
+    border-radius: 10px;
+    font-size: 1em;
+}
+
+input[type="submit"] {
+    background-color: var(--accent);
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .3s linear;
+}
+
+input[type="radio"] {
+    display: inline;
+    width: auto;
+}
+
+input[type="submit"]:hover {
+    border: none;
+    transform: translateY(-10px);
+}
+
+h1 {
+    font-size: 4em;
+    margin-bottom: 0.5em;
+}
+
+h2 {
+    margin-bottom: 0.9em;
+}
