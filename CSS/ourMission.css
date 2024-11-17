@@ -13,8 +13,8 @@ body{
     min-height: 100vh;
     display:flex;
     align-items: center;
-    background: rgb(41,51,96);
-    background: radial-gradient(circle, rgba(41,51,96,1) 0%, rgba(0,0,0,1) 100%);
+    background: rgb(143,45,24);
+    background: radial-gradient(circle, rgba(143,45,24,1) 0%, rgba(3,10,18,1) 100%);
 }
 
 .about-section{
