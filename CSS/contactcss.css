@@ -1,13 +1,13 @@
 :root {
     --text: rgb(232, 242, 251);
-    --background: rgb(6, 19, 34);
-    --primary: rgb(132, 189, 235);
+    --background:rgb(6, 19, 34);
+    --primary: rgb(143, 45, 24);
     --secondary: rgb(143, 45, 24);
-    --accent: rgb(198, 221, 48);
+    --accent: rgb(6, 19, 34);
 }
 
 body {
-    background-image: radial-gradient(circle, var(--secondary) 0%, var(--background) 100%);
+    background:rgb(6, 19, 34);
     text-align: center;
     color: var(--text);
 }
@@ -29,7 +29,7 @@ label {
     display: block;
     margin-bottom: 0.5em;
     font-size: 1em;
-    color: rgb(60, 82, 110);
+    color: rgb(255, 255, 255);
     font-weight: 600;
 }
 
@@ -52,7 +52,8 @@ textarea {
 }
 
 input[type="submit"] {
-    background-color: var(--accent);
+    background-color: var(--background);
+    color: white;
     padding: 10px;
     border: none;
     border-radius: 10px;
